@@ -1,0 +1,2 @@
+# charts should not be vendored in, only added as dependencies
+charts/
