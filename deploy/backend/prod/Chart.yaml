@@ -1,0 +1,12 @@
+# backend/Chart.yaml
+
+apiVersion: v2
+name: backend
+description: A Helm chart for Kubernetes
+version: 0.1.0
+type: application
+
+dependencies:
+  - name: backend
+    version: 0.1.0
+    repository: "file://../../charts/backend"
