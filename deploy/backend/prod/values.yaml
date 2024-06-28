@@ -4,7 +4,7 @@ backend:
 
   image: 
     repository: "europe-west1-docker.pkg.dev/threatmonit/threatmonit/backend"
-    tag: "prod-d6b0cc0"
+    tag: "prod-28cb2ee"
 
   ingress:
     enabled: true
