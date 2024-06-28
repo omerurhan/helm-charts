@@ -11,6 +11,7 @@ backend:
     className: "nginx"
     annotations:
       cert-manager.io/cluster-issuer: "letsencrypt-prod"
+      nginx.ingress.kubernetes.io/whitelist-source-range: "161.97.106.132/32"
     hosts:
       - host: capi.threatmonit.io
         paths:
