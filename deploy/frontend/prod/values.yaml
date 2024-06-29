@@ -3,8 +3,8 @@ backend:
   replicaCount: 1
 
   image: 
-    repository: "europe-west1-docker.pkg.dev/threatmonit/threatmonit/backend"
-    tag: "prod-28cb2ee"
+    repository: "europe-west1-docker.pkg.dev/threatmonit/threatmonit/frontend"
+    tag: ""
 
   ingress:
     enabled: true
@@ -12,23 +12,23 @@ backend:
     annotations:
       cert-manager.io/cluster-issuer: "letsencrypt-prod"
     hosts:
-      - host: capi.threatmonit.io
+      - host: cdashboard.threatmonit.io
         paths:
           - path: /
             pathType: ImplementationSpecific
     tls:
     - secretName: backend-tls
       hosts:
-        - capi.threatmonit.io
+        - cdashboard.threatmonit.io
 
   service:
     type: ClusterIP
     port: 80
-    targetPort: 8080
+    targetPort: 80
 
   resources: 
     limits:
-      memory: 4Gi
+      memory: 1Gi
     requests:
-      cpu: 1
-      memory: 2Gi
+      cpu: 100m
+      memory: 512Mi

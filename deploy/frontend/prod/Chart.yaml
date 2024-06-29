@@ -1,0 +1,12 @@
+# frontend/Chart.yaml
+
+apiVersion: v2
+name: frontend
+description: A Helm chart for Kubernetes
+version: 0.1.0
+type: application
+
+dependencies:
+  - name: frontend
+    version: 0.1.0
+    repository: "file://../../../charts/frontend"
