@@ -32,6 +32,3 @@ backend:
     requests:
       cpu: 100m
       memory: 512Mi
-
-  serviceAccount: 
-    create: false
